@@ -1,5 +1,5 @@
 import os
-import shutil
+#import shutil
 import streamlit as st
 
 from core.read_pdf import load_pdf
@@ -43,8 +43,8 @@ if uploaded_file is not None:
 
         with st.spinner("Processing PDF..."):
 
-            if os.path.exists("chroma_db"):
-                shutil.rmtree("chroma_db")
+            #if os.path.exists("chroma_db"):
+             #   shutil.rmtree("chroma_db")
 
             with open(filepath, "wb") as f:
                 f.write(uploaded_file.getbuffer())
