@@ -1,9 +1,11 @@
 import shutil
 import os
+import tempfile
 
 from langchain_chroma import Chroma
 
-CHROMA_PATH = "chroma_db"
+#CHROMA_PATH = "chroma_db"
+CHROMA_PATH = os.path.join(tempfile.gettempdir(), "chroma_db")
 
 
 def create_vector_store(chunks, embedding_model):
